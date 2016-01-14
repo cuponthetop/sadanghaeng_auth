@@ -37,4 +37,4 @@ pre-commit-hook:
 jshint랑 jscs를 돌려서 간단한 코딩 규칙에 맞게 써졌는지 검사해요 
 
 pre-push-hook:
-master 브랜치에 force-push 하지 못하게 
+master 브랜치에 force-push 하지 못하게 막아요
