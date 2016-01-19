@@ -13,6 +13,7 @@
   "author": "cuponthetop",
   "license": "MIT",
   "devDependencies": {
+    "errorhandler": "^1.4.3",
     "gulp": "^3.9.0",
     "gulp-jscs": "^3.0.2",
     "gulp-jshint": "^2.0.0",
@@ -20,13 +21,18 @@
     "mocha": "^2.3.4",
     "q": "^1.4.1",
     "run-sequence": "^1.1.5",
+    "should": "^8.1.1",
     "spawn-mocha-parallel": "^1.3.1"
   },
   "dependencies": {
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
+    "express-rate-limit": "^2.0.2",
+    "express-session": "^1.13.0",
+    "helmet": "^1.1.0",
     "method-override": "^2.3.5",
     "mongoose": "^4.3.5",
+    "morgan": "^1.6.1",
     "oauth2-server": "^2.4.1",
     "underscore": "^1.8.3"
   }
