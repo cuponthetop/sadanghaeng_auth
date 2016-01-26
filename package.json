@@ -6,9 +6,15 @@
     "url": "git@github.com:cuponthetop/sadanghaeng_auth.git"
   },
   "description": "sadanghaeng_auth",
-  "main": "main.js",
+  "engines": [
+    "node"
+  ],
+  "main": "./lib/server/server.js",
   "scripts": {
     "test": "gulp test"
+  },
+  "directories": {
+    "lib": "./lib"  
   },
   "author": "cuponthetop",
   "license": "MIT",

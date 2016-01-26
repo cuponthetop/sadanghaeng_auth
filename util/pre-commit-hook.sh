@@ -2,7 +2,7 @@
 set +e
 echo "Linting..."
 gulp="./node_modules/.bin/gulp"
-out=$(gulp lint 2>&1)
+out=$($gulp lint 2>&1)
 status=$?
 if [ "$status" != "0" ]; then
     echo "$out"
