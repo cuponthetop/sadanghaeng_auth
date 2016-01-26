@@ -2,7 +2,6 @@
 
 var bodyParser = require('body-parser')
   , methodOverride = require('method-override')
-  // , oauth = require('oauth2-server')
   , session = require('express-session')
   , helmet = require('helmet')
   , logger = require('morgan')
