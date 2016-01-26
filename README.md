@@ -7,6 +7,7 @@ lib/          ... 인증 서버 관련 실제 코드들
   model/      ... mongodb 관련 mongoose 모델
   route/      ... 인증 서버의 API 라우팅 관련 로직 
   server/     ... 인증 서버의 로직
+    server.js ... 인증 서버 켤 때 켜질 메인 스크립트
 test/         ... 테스트 코드가 들어갈 부분
 util/         ... pre-commit-hook, pre-push-hook 등 유틸리티
 
@@ -15,8 +16,7 @@ util/         ... pre-commit-hook, pre-push-hook 등 유틸리티
 .jshintingore ... jshint ignore list
 .jshintrc     ... jshint 검사 규칙
 .travis.yml   ... travis 관련 yaml
-gulpfile.js   ... gulp task들을 정의한 스크립트 
-main.js       ... 인증 서버 켤 때 켜질 메인 스크립트  
+gulpfile.js   ... gulp task들을 정의한 스크립트  
 package.json  ... 노드 프로젝트 설정 파일 
 README.md     ... 현재 읽고 있는 파일
 setup-dev.sh  ... npm module install 및 pre-commit-hook, pre-push-hook 설정
