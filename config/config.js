@@ -11,9 +11,9 @@ var config = {
   session: '' 
 };
 
-_.mapObject(config, function (val, configName) {
-  var configPath = path.resolve('./', nodeEnv, configName, '.js');
+module.exports = _.mapObject(config, function (val, configName) {
+  var configPath = path.resolve(__dirname, nodeEnv, configName + '.js');
   return require(configPath);
 });
 
-module.exports = config;
+// module.exports = config;
