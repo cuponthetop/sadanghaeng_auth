@@ -8,7 +8,9 @@ var nodeEnv = process.env.NODE_ENV || 'development';
 
 var config = { 
   db: '', 
-  session: '' 
+  session: '',
+  auth: '',
+  user: ''
 };
 
 module.exports = _.mapObject(config, function (val, configName) {
