@@ -3,6 +3,7 @@
 ## 디렉토리 및 파일 설명
 
 ```
+config/     ... 설정 파일
 lib/          ... 인증 서버 관련 실제 코드들
   model/      ... mongodb 관련 mongoose 모델
   route/      ... 인증 서버의 API 라우팅 관련 로직 
