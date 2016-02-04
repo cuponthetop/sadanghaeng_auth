@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-  authorizedClientIds: ['garim', 'garim-ios'],
+  authorizedClientIds: ['garim-test'],
 
   resetTokenLifeTime: 24 * 60 * 60 * 1000,
   verifyTokenLifeTime: 24 * 60 * 60 * 1000,

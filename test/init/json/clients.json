@@ -1,0 +1,7 @@
+[
+  {
+    "clientId": "garim-test",
+    "clientSecret": "123",
+    "redirectUri": "/oauth/redirect"
+  }
+]

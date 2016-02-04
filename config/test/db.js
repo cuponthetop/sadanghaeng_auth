@@ -2,7 +2,7 @@
 
 module.exports = {
   uri: 'mongodb://localhost/',
-  dbName: 'garim',
+  dbName: 'garim-test',
   username: '',
   password: ''
 };
