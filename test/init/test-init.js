@@ -14,16 +14,13 @@ mongoose.connect(dbUri, dbOptions);
 
 var Client = require('../../lib/model/client');
 var User = require('../../lib/model/user');
-var Univ = require('../../lib/model/university');
 var ClientData = require('./json/clients.json');
 var UserData = require('./json/users.json');
-var UnivData = require('./json/universitys.json');
 
 function clearTestDb() {
   return Q.all([
     Client.remove({}),
     User.remove({}),
-    Univ.remove({}),
   ]);
 }
 
@@ -31,7 +28,6 @@ function insertTestDb() {
   return Q.all([
     Client.create(ClientData),
     User.create(UserData),
-    Univ.create(UnivData),
   ]);
 }
 

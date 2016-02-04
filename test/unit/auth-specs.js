@@ -2,7 +2,7 @@
 process.env.NODE_ENV = 'test';
 
 var assert = require('assert')
-  , request = require('supertest')('http://localhost:3001')
+  , request = require('supertest')('http://localhost:3002')
   , accessTokenCtrl = require('../../lib/controller/accesstoken')
   ;
 

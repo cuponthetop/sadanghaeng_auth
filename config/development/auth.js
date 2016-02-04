@@ -3,9 +3,6 @@
 module.exports = {
   authorizedClientIds: ['garim', 'garim-ios'],
 
-  resetTokenLifeTime: 24 * 60 * 60 * 1000,
-  verifyTokenLifeTime: 24 * 60 * 60 * 1000,
-
   accessTokenLifeTime: 60 * 60,
   refreshTokenLifeTime: 1209600,
   authCodeLifeTime: 30,
