@@ -45,7 +45,12 @@ describe('Auth', () => {
       request
         .post('/auth/v1/authorise')
         .set('Authorization', 'Bearer ' + accessToken)
-        .expect(200, done);
+        .expect(200)
+        .end((err, res) => {
+          res.body.should.contain.keys(['userId']);
+
+          done();
+        });
     });
 
   });
