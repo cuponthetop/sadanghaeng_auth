@@ -29,7 +29,7 @@ function generateMochaOpts() {
   return {
     flags: {
       timeout: 5000,
-      R: process.env.MOCHA_REPORTER || 'nyan',
+      R: process.env.MOCHA_REPORTER || 'spec',
       'c': true
     },
     env: _.clone(process.env),
