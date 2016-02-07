@@ -1,5 +1,8 @@
 # Auth Server 사당행
 
+## Status
+[![Build Status](https://travis-ci.org/cuponthetop/sadanghaeng_auth.png)](https://travis-ci.org/cuponthetop/sadanghaeng_auth)
+
 ## 디렉토리 및 파일 설명
 
 ```
