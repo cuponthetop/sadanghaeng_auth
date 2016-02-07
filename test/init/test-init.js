@@ -22,7 +22,7 @@ var UserData = require('./json/users.json');
 
 function clearTestDb() {
   return Q.all([
-    AccessToken.remote({}),
+    AccessToken.remove({}),
     RefreshToken.remove({}),
     Client.remove({}),
     User.remove({}),
