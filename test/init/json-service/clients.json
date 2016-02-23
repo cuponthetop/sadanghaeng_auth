@@ -1,0 +1,7 @@
+[
+  {
+    "clientId": "garim-service",
+    "clientSecret": "garimsecret",
+    "redirectUri": "/garimgarim_if_you_read_this_you_are_in_trouble"
+  }
+]

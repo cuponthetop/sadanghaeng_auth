@@ -2,7 +2,7 @@
 process.env.NODE_ENV = 'test';
 
 var chai = require('../helper/setup-chai')
-  , request = require('supertest')('http://localhost:3003')
+  , request = require('supertest')('http://localhost:5003')
   , AccessTokenCtrl = require('../../lib/controller/accesstoken')
   , mongoose = require('mongoose')
   , config = require('../../config/config')

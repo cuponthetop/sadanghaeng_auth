@@ -2,7 +2,7 @@
 process.env.NODE_ENV = 'test';
 
 var chai = require('../helper/setup-chai')
-  , request = require('supertest')('http://localhost:3003')
+  , request = require('supertest')('http://localhost:5003')
   ;
 
 describe('Auth', () => {
