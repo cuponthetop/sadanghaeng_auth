@@ -36,14 +36,15 @@
   "dependencies": {
     "bcrypt": "^0.8.5",
     "body-parser": "^1.14.2",
+    "errorhandler": "^1.4.3",
     "express": "^4.13.3",
     "express-session": "^1.13.0",
     "helmet": "^1.1.0",
     "method-override": "^2.3.5",
     "mongoose": "^4.3.5",
     "morgan": "^1.6.1",
-    "q": "^1.4.1",
     "oauth2-server": "^2.4.1",
+    "q": "^1.4.1",
     "underscore": "^1.8.3",
     "winston": "^2.1.1"
   }
