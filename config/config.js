@@ -4,7 +4,8 @@ var path = require('path')
   , _ = require('underscore')
   ;
 
-var nodeEnv = process.env.NODE_ENV || 'development';
+//var nodeEnv = process.env.NODE_ENV || 'development';
+var nodeEnv = process.env.NODE_ENV || 'production';
 
 var config = { 
   db: '', 

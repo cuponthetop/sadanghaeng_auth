@@ -15,3 +15,5 @@ build/Release
 node_modules
 
 .vscode
+
+.idea/*
