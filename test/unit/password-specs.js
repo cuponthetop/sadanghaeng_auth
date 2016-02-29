@@ -2,12 +2,14 @@
 process.env.NODE_ENV = 'test';
 
 var chai = require('../helper/setup-chai')
+  , clients = require('../init/json/clients.json')
   , request = require('supertest')('http://localhost:5003')
   ;
 
 describe('Auth', () => {
-  var clientSecret = '123';
-  var clientCredentials = 'garim-test' + ':' + clientSecret;
+  var testClient = clients[0];
+  var clientSecret = testClient.clientSecret;
+  var clientCredentials = testClient.clientId + ':' + clientSecret;
 
   describe('Login with Password', () => {
 

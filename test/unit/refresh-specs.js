@@ -3,20 +3,23 @@ process.env.NODE_ENV = 'test';
 
 var chai = require('../helper/setup-chai')
   , request = require('supertest')('http://localhost:5003')
+  , clients = require('../init/json/clients.json')
   , AccessTokenCtrl = require('../../lib/controller/accesstoken')
   , mongoose = require('mongoose')
   , config = require('../../config/config')
   ;
 
 describe('Auth', () => {
-  var clientSecret = '123';
-  var clientCredentials = 'garim-test' + ':' + clientSecret;
+  var testClient = clients[0];
+  var clientSecret = testClient.clientSecret;
+  var clientCredentials = testClient.clientId + ':' + clientSecret;
 
   describe('Login with token refresh', () => {
 
     var accessToken;
     var newAccessToken;
     var refreshToken;
+    var newRefreshToken;
 
 
     before(() => {
@@ -80,7 +83,7 @@ describe('Auth', () => {
         .end((err, res) => {
 
           newAccessToken = res.body.access_token;
-          refreshToken = res.body.refresh_token;
+          newRefreshToken = res.body.refresh_token;
 
           res.body.should.contain.keys(['access_token', 'refresh_token']);
           done();
@@ -99,5 +102,48 @@ describe('Auth', () => {
         });
     });
 
+    it('should still forbid access with old access token', (done) => {
+      request
+        .post('/auth/v1/authorise')
+        .set('Authorization', 'Bearer ' + accessToken)
+        .expect(401)
+        .end((err, res) => {
+          done();
+        });
+    });
+
+    it('should not allow the refresh token to be used twice', (done) => {
+      request
+        .post('/auth/v1/token')
+        .auth(clientCredentials, '')
+        .type('form')
+        .send({
+          grant_type: 'refresh_token',
+          refresh_token: refreshToken
+        })
+        .expect(401)
+        .end((err, res) => {
+          done();
+        });
+    });
+
+    it('should allow the new refresh token refresh access token even when access token was not expired', (done) => {
+      request
+        .post('/auth/v1/token')
+        .auth(clientCredentials, '')
+        .type('form')
+        .send({
+          grant_type: 'refresh_token',
+          refresh_token: newRefreshToken
+        })
+        .expect(200)
+        .end((err, res) => {
+          newAccessToken = res.body.access_token;
+          newRefreshToken = res.body.refresh_token;
+
+          res.body.should.contain.keys(['access_token', 'refresh_token']);
+          done();
+        });
+    });
   });
 });
