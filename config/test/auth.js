@@ -3,9 +3,9 @@
 module.exports = {
   authorizedClientIds: ['garim-test'],
 
-  accessTokenLifeTime: 60 * 60,
-  refreshTokenLifeTime: 1209600,
-  authCodeLifeTime: 30,
+  accessTokenLifeTime: 5,
+  refreshTokenLifeTime: 10,
+  authCodeLifeTime: 5,
 
   debug: true
 };
